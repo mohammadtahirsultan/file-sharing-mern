@@ -12,7 +12,7 @@ export const uploadFile = async (req, res) => {
         const file = await File.create(fileObj)
         res.status(201).json({
             sucess: true,
-            path: `http://localhost:5000/api/v1/download/${file._id}`,
+            path: `https://filesharing-lemon.vercel.app/api/v1/download/${file._id}`,
             message: "File Uploaded",
         });
     } catch (error) {

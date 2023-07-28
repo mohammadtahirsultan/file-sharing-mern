@@ -4,9 +4,7 @@ export const uploadFile = async (req, res) => {
         const fileObj = { name: req.file.originalname, path: req.file.path }
 
         console.log(req.body);
-        // const { name, file } = req.body
         if (!fileObj.name || !fileObj.path) {
-            // if (!name || !path) {
             return new Error("Name and Path is Required")
         }
         const file = await File.create(fileObj)

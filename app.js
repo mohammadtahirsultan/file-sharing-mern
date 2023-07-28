@@ -7,7 +7,11 @@ config({ path: "./config.env" });
 
 
 // using Middlewares
-app.use(cors());
+app.use(cors(
+    {
+        origin: "https://uploaddownload.netlify.app"
+    }
+));
 
 
 app.use(express.json());

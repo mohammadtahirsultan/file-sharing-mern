@@ -3,7 +3,6 @@ export const uploadFile = async (req, res) => {
     try {
         const fileObj = { name: req.file.originalname, path: req.file.path }
 
-        console.log(req.body);
         if (!fileObj.name || !fileObj.path) {
             return new Error("Name and Path is Required")
         }
